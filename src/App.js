@@ -98,7 +98,7 @@ export function App() {
       dates.forEach((date) => {
         let count = response.data.near_earth_objects[date].length;
         asteroidCount.push(count);
-        totalAsteroids += count;
+        // totalAsteroids += count;
         response.data.near_earth_objects[date].forEach((asteroid) => {
           if (
             !fastestAsteroid.speed ||
