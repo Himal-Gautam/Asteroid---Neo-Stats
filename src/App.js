@@ -97,13 +97,17 @@ export function App() {
       );
 
       // generating dates for labels for chart
-      const dates = Object.keys(response.data.near_earth_objects);
+      const dates = Object.keys(response.data.near_earth_objects)
+        .map((date) => new Date(date))
+        .sort((a, b) => a - b) // Sort dates in ascending order
+        .map((date) => date.toISOString().split("T")[0]);
 
       const asteroidCount = [];
       let fastestAsteroid = {};
       let closestAsteroid = {};
       let avgSizeOfAsteroid = 0;
       // let totalAsteroids = 0;
+
 
 
       dates.forEach((date) => {
