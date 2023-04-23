@@ -204,7 +204,7 @@ export function App() {
         <header>
           <Navbar bg="dark" variant="dark">
             <Container>
-              <Navbar.Brand href="#home">
+              <Navbar.Brand>
                 <img
                   alt="ANS"
                   src={require("./assets/meteorite.png")}
