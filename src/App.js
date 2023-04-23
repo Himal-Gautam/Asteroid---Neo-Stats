@@ -93,7 +93,7 @@ export function App() {
       let fastestAsteroid = {};
       let closestAsteroid = {};
       let avgSizeOfAsteroid = 0;
-      let totalAsteroids = 0;
+      // let totalAsteroids = 0;
 
       dates.forEach((date) => {
         let count = response.data.near_earth_objects[date].length;
